@@ -52,7 +52,7 @@ class FreqaiExampleStrategy(IStrategy):
     linear_roi_offset = DecimalParameter(
         0.00, 0.02, default=0.005, space="sell", optimize=False, load=True
     )
-    max_roi_time_long = IntParameter(0, 800, default=400, space="sell", optimize=False, load=True)
+    max_roi_time_long = IntParameter(0, 800, default=2000, space="sell", optimize=False, load=True)
 
     def informative_pairs(self):
         whitelist_pairs = self.dp.current_whitelist()
